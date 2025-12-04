@@ -5,9 +5,7 @@
         <div class="col-lg-6 col-md-8 mx-auto">
             <div class="card todo-card">
                 <div class="card-header">
-                    <h4 class="mb-0">
-                        <span class="me-2">&#9745;</span> My Todo List
-                    </h4>
+                    <h4 class="mb-0">My Todo List</h4>
                 </div>
                 <div class="card-body p-4">
                     <!-- Add Todo Form -->
@@ -31,9 +29,7 @@
                                     <div class="d-flex align-items-center flex-grow-1">
                                         <form asp-action="ToggleTodo" method="post" class="me-3">
                                             <input type="hidden" name="id" value="@todo.Id" />
-                                            <button type="submit" class="btn btn-sm todo-check @(todo.IsCompleted ? "completed" : "")">
-                                                @(todo.IsCompleted ? "&#10003;" : "")
-                                            </button>
+                                            <button type="submit" class="btn btn-sm todo-check @(todo.IsCompleted ? "completed" : "")"></button>
                                         </form>
                                         <span class="todo-text @(todo.IsCompleted ? "completed" : "")">
                                             @todo.Title
@@ -41,9 +37,7 @@
                                     </div>
                                     <form asp-action="DeleteTodo" method="post">
                                         <input type="hidden" name="id" value="@todo.Id" />
-                                        <button type="submit" class="btn btn-sm btn-delete" title="Delete">
-                                            &#10005;
-                                        </button>
+                                        <button type="submit" class="btn btn-sm btn-delete" title="Delete"></button>
                                     </form>
                                 </li>
                             }

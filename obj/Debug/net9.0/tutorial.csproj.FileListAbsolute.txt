@@ -15,7 +15,6 @@
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/tutorial.MvcApplicationPartsAssemblyInfo.cache
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/tutorial.RazorAssemblyInfo.cache
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/tutorial.RazorAssemblyInfo.cs
-/home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/tutorial.sourcelink.json
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/rjimswa.dswa.cache.json
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
@@ -94,5 +93,5 @@
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/tutorial.genruntimeconfig.cache
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/ref/tutorial.dll
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/compressed/zkogvzvfr9-rqeyk9q10v.gz
-/home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/compressed/hmg16irnrr-33n0n79kqw.gz
 /home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/compressed/6aibgj3ehh-e5dtpi26zi.gz
+/home/noah-gallego/Dropbox/Desktop/tutorial/obj/Debug/net9.0/compressed/hmg16irnrr-mfz4le1wgg.gz
