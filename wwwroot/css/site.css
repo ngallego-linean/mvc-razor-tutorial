@@ -1,0 +1,542 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* Page centering */
+.container.mt-4 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tutorial article styling */
+.tutorial-content {
+  display: flex;
+  justify-content: center;
+}
+
+.tutorial-content article {
+  max-width: 800px;
+  width: 100%;
+  line-height: 1.7;
+}
+
+.tutorial-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.tutorial-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.tutorial-content pre {
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.tutorial-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.tutorial-content code {
+  font-family: 'SF Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.875em;
+}
+
+.tutorial-content p code,
+.tutorial-content td code {
+  background-color: #f6f8fa;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #e83e8c;
+}
+
+.tutorial-content a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.tutorial-content a:hover {
+  text-decoration: underline;
+}
+
+/* Final step box */
+.final-step {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #dee2e6;
+  margin-top: 1rem;
+}
+
+.final-step h2 {
+  margin-top: 0 !important;
+  color: #212529;
+}
+
+/* Linean logo styling */
+.linean-logo {
+  opacity: 0.9;
+}
+
+/* Todo app styling */
+.todo-app .card {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.todo-app .card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1.25rem 1.5rem;
+}
+
+.todo-app .card-header h4 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.todo-app .card-body {
+  background-color: #fff;
+}
+
+.todo-app .list-group-item {
+  border-left: none;
+  border-right: none;
+  border-color: #eee;
+  transition: background-color 0.2s ease;
+}
+
+.todo-app .list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.todo-app .card-footer {
+  background-color: #f8f9fa;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+/* Todo checkbox button */
+.todo-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: transparent;
+  transition: all 0.2s ease;
+}
+
+.todo-check:hover {
+  border-color: #667eea;
+  background-color: rgba(102, 126, 234, 0.1);
+}
+
+.todo-check.completed {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+/* Todo text */
+.todo-text {
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #adb5bd;
+}
+
+/* Delete button */
+.btn-delete {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #adb5bd;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+/* Tab styling */
+.nav-tabs {
+  border-bottom: 2px solid #e9ecef;
+}
+
+.nav-tabs .nav-link {
+  font-weight: 500;
+  color: #6c757d;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: -2px;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #212529;
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  color: #0d6efd;
+  background: none;
+  border: none;
+  border-bottom: 3px solid #0d6efd;
+}
+
+/* Footer styling */
+.footer {
+  padding: 1rem 0;
+  font-size: 0.875rem;
+}
+
+/* Highlight.js overrides */
+.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.theme-toggle:hover {
+  background-color: #f8f9fa;
+}
+
+/* ============================================
+   DARK MODE STYLES
+   ============================================ */
+
+[data-theme="dark"] {
+  background-color: #1a1a2e;
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .navbar {
+  background-color: #16213e !important;
+  border-color: #0f3460 !important;
+}
+
+[data-theme="dark"] .navbar-brand,
+[data-theme="dark"] .nav-link {
+  color: #e4e4e7 !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #fff !important;
+}
+
+[data-theme="dark"] .tutorial-content h2 {
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .tutorial-content h3 {
+  color: #a1a1aa;
+}
+
+[data-theme="dark"] .tutorial-content pre {
+  background-color: #0d1117;
+  border-color: #30363d;
+}
+
+[data-theme="dark"] .tutorial-content p code,
+[data-theme="dark"] .tutorial-content td code {
+  background-color: #21262d;
+  color: #f97583;
+}
+
+[data-theme="dark"] .tutorial-content a {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .table {
+  color: #ffffff;
+  background-color: transparent;
+  --bs-table-bg: transparent;
+}
+
+[data-theme="dark"] .table td,
+[data-theme="dark"] .table th {
+  border-color: #30363d;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .table-sm td,
+[data-theme="dark"] .table-sm th {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .table strong {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .final-step {
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  border-color: #0f3460;
+}
+
+[data-theme="dark"] .final-step h2 {
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .text-muted {
+  color: #a1a1aa !important;
+}
+
+[data-theme="dark"] .nav-tabs {
+  border-color: #30363d;
+}
+
+[data-theme="dark"] .nav-tabs .nav-link {
+  color: #a1a1aa;
+}
+
+[data-theme="dark"] .nav-tabs .nav-link:hover {
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .nav-tabs .nav-link.active {
+  color: #58a6ff;
+  border-bottom-color: #58a6ff;
+}
+
+[data-theme="dark"] .footer {
+  background-color: #16213e;
+  border-color: #0f3460 !important;
+  color: #a1a1aa;
+}
+
+[data-theme="dark"] .todo-app .card {
+  background-color: #16213e !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .todo-app .card-body {
+  background-color: #1a1a2e !important;
+}
+
+[data-theme="dark"] .todo-app .list-group {
+  background-color: #1a1a2e;
+}
+
+[data-theme="dark"] .todo-app .list-group-item {
+  background-color: #1a1a2e !important;
+  border-color: #30363d;
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .todo-app .list-group-item:hover {
+  background-color: #16213e !important;
+}
+
+[data-theme="dark"] .todo-app .card-footer {
+  background-color: #16213e !important;
+  color: #e4e4e7 !important;
+  border-top: 1px solid #30363d;
+}
+
+[data-theme="dark"] .todo-app .card-footer .text-muted {
+  color: #a1a1aa !important;
+}
+
+/* Dark mode todo checkbox */
+[data-theme="dark"] .todo-check {
+  border-color: #4a5568;
+}
+
+[data-theme="dark"] .todo-check:hover {
+  border-color: #667eea;
+  background-color: rgba(102, 126, 234, 0.2);
+}
+
+/* Dark mode todo text */
+[data-theme="dark"] .todo-text {
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .todo-text.completed {
+  color: #6b7280;
+}
+
+/* Dark mode delete button */
+[data-theme="dark"] .btn-delete {
+  color: #6b7280;
+}
+
+[data-theme="dark"] .btn-delete:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+[data-theme="dark"] .form-control {
+  background-color: #21262d;
+  border-color: #30363d;
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #6e7681;
+}
+
+[data-theme="dark"] .theme-toggle {
+  border-color: #30363d;
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background-color: #21262d;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #16213e !important;
+}
+
+/* Dark mode highlight.js - GitHub Dark theme */
+[data-theme="dark"] .hljs {
+  color: #c9d1d9;
+}
+
+[data-theme="dark"] .hljs-keyword,
+[data-theme="dark"] .hljs-selector-tag {
+  color: #ff7b72;
+  font-weight: 500;
+}
+
+[data-theme="dark"] .hljs-string,
+[data-theme="dark"] .hljs-attr {
+  color: #a5d6ff;
+}
+
+[data-theme="dark"] .hljs-comment,
+[data-theme="dark"] .hljs-quote {
+  color: #8b949e;
+  font-style: italic;
+}
+
+[data-theme="dark"] .hljs-variable,
+[data-theme="dark"] .hljs-template-variable {
+  color: #ffa657;
+}
+
+[data-theme="dark"] .hljs-number,
+[data-theme="dark"] .hljs-literal {
+  color: #79c0ff;
+}
+
+[data-theme="dark"] .hljs-type,
+[data-theme="dark"] .hljs-built_in,
+[data-theme="dark"] .hljs-builtin-name {
+  color: #7ee787;
+}
+
+[data-theme="dark"] .hljs-function,
+[data-theme="dark"] .hljs-title {
+  color: #d2a8ff;
+}
+
+[data-theme="dark"] .hljs-symbol,
+[data-theme="dark"] .hljs-bullet {
+  color: #ffa657;
+}
+
+[data-theme="dark"] .hljs-section {
+  color: #79c0ff;
+  font-weight: bold;
+}
+
+[data-theme="dark"] .hljs-addition {
+  color: #aff5b4;
+  background-color: rgba(46, 160, 67, 0.15);
+}
+
+[data-theme="dark"] .hljs-deletion {
+  color: #ffdcd7;
+  background-color: rgba(248, 81, 73, 0.15);
+}
+
+[data-theme="dark"] .hljs-name,
+[data-theme="dark"] .hljs-tag {
+  color: #7ee787;
+}
+
+[data-theme="dark"] .hljs-attribute {
+  color: #79c0ff;
+}
+
+[data-theme="dark"] .hljs-params {
+  color: #c9d1d9;
+}
+
+[data-theme="dark"] .hljs-meta {
+  color: #8b949e;
+}

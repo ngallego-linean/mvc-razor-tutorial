@@ -1,0 +1,43 @@
+@model List<tutorial.Models.TodoItem>
+@{
+    ViewData["Title"] = "ASP.NET Core MVC Tutorial";
+}
+
+<div class="container mt-4">
+    <div class="text-center mb-4">
+        <h1 class="mb-2">Building a Todo App with ASP.NET Core MVC</h1>
+        <p class="text-muted">A hands-on tutorial for getting started with .NET development</p>
+    </div>
+
+    <!-- Bootstrap Nav Tabs -->
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tutorial-tab" data-bs-toggle="tab"
+                    data-bs-target="#tutorial" type="button" role="tab"
+                    aria-controls="tutorial" aria-selected="true">
+                Tutorial
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="app-tab" data-bs-toggle="tab"
+                    data-bs-target="#app" type="button" role="tab"
+                    aria-controls="app" aria-selected="false">
+                Finished Product
+            </button>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="myTabContent">
+        <!-- Tutorial Tab -->
+        <div class="tab-pane fade show active" id="tutorial" role="tabpanel"
+             aria-labelledby="tutorial-tab">
+            @await Html.PartialAsync("_TutorialContent")
+        </div>
+
+        <!-- Todo App Tab -->
+        <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+            @await Html.PartialAsync("_TodoApp", Model)
+        </div>
+    </div>
+</div>

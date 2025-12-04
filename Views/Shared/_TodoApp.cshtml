@@ -1,0 +1,71 @@
+@model List<tutorial.Models.TodoItem>
+
+<div class="todo-app py-4">
+    <div class="row">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <div class="card todo-card">
+                <div class="card-header">
+                    <h4 class="mb-0">
+                        <span class="me-2">&#9745;</span> My Todo List
+                    </h4>
+                </div>
+                <div class="card-body p-4">
+                    <!-- Add Todo Form -->
+                    <form asp-action="AddTodo" method="post" class="mb-4">
+                        <div class="input-group input-group-lg">
+                            <input type="text" name="title" class="form-control"
+                                   placeholder="What needs to be done?" required>
+                            <button type="submit" class="btn btn-primary px-4">
+                                <strong>+</strong> Add
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Todo List -->
+                    @if (Model.Any())
+                    {
+                        <ul class="list-group list-group-flush">
+                            @foreach (var todo in Model)
+                            {
+                                <li class="list-group-item todo-item d-flex justify-content-between align-items-center py-3">
+                                    <div class="d-flex align-items-center flex-grow-1">
+                                        <form asp-action="ToggleTodo" method="post" class="me-3">
+                                            <input type="hidden" name="id" value="@todo.Id" />
+                                            <button type="submit" class="btn btn-sm todo-check @(todo.IsCompleted ? "completed" : "")">
+                                                @(todo.IsCompleted ? "&#10003;" : "")
+                                            </button>
+                                        </form>
+                                        <span class="todo-text @(todo.IsCompleted ? "completed" : "")">
+                                            @todo.Title
+                                        </span>
+                                    </div>
+                                    <form asp-action="DeleteTodo" method="post">
+                                        <input type="hidden" name="id" value="@todo.Id" />
+                                        <button type="submit" class="btn btn-sm btn-delete" title="Delete">
+                                            &#10005;
+                                        </button>
+                                    </form>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="text-center py-5">
+                            <p class="text-muted mb-0">No todos yet.</p>
+                            <p class="text-muted small">Add your first task above!</p>
+                        </div>
+                    }
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                    <span>
+                        <strong>@Model.Count(t => !t.IsCompleted)</strong> items remaining
+                    </span>
+                    <span class="text-muted small">
+                        @Model.Count(t => t.IsCompleted) completed
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,152 @@
+<div class="tutorial-content py-4">
+    <article>
+        <div class="text-center mb-4">
+            <img src="~/images/linean-logo.jpeg" alt="Linean" class="linean-logo mb-3" style="height: 60px; border-radius: 8px;">
+            <p class="text-muted">Made for Linean</p>
+        </div>
+
+        <h2>What We Are Building</h2>
+        <p>
+            A simple todo list application using ASP.NET Core MVC. The application demonstrates
+            Controllers, Views, Models, and in-memory data storage. It supports adding new items,
+            marking items as complete, and deleting items.
+        </p>
+        <p>
+            Click the "Finished Product" tab above to see the working application.
+        </p>
+        <p>
+            For more resources, check out the <a href="https://ngallego-linean.github.io/Linean-AI-Docs/" target="_blank">Linean AI Documentation</a>.
+        </p>
+
+        <hr class="my-4">
+
+        <h2>Key Terms</h2>
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td><strong>MVC</strong></td>
+                    <td>Model-View-Controller. A design pattern that separates app logic into three components.</td>
+                </tr>
+                <tr>
+                    <td><strong>Model</strong></td>
+                    <td>Data classes that represent the structure of your data (e.g., <code>TodoItem.cs</code>).</td>
+                </tr>
+                <tr>
+                    <td><strong>View</strong></td>
+                    <td>The UI layer. Razor templates (<code>.cshtml</code>) that render HTML to the browser.</td>
+                </tr>
+                <tr>
+                    <td><strong>Controller</strong></td>
+                    <td>Handles HTTP requests, processes data, and returns Views. The middleman between Model and View.</td>
+                </tr>
+                <tr>
+                    <td><strong>Razor</strong></td>
+                    <td>A syntax for embedding C# code in HTML using <code>@@</code> symbols.</td>
+                </tr>
+                <tr>
+                    <td><strong>SDK</strong></td>
+                    <td>Software Development Kit. Includes the compiler, libraries, and CLI tools.</td>
+                </tr>
+                <tr>
+                    <td><strong>CLI</strong></td>
+                    <td>Command Line Interface. Run commands like <code>dotnet run</code> in the terminal.</td>
+                </tr>
+                <tr>
+                    <td><strong>NuGet</strong></td>
+                    <td>Package manager for .NET. Like npm for Node.js.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr class="my-4">
+
+        <h2>Installing .NET 9 SDK</h2>
+
+        <h3>Windows</h3>
+        <p>Using Windows Package Manager:</p>
+        <pre><code class="language-bash">winget install dotnet-sdk-9</code></pre>
+        <p>
+            Or download the installer from
+            <a href="https://dotnet.microsoft.com/download/dotnet/9.0" target="_blank">dotnet.microsoft.com</a>.
+        </p>
+
+        <h3>macOS</h3>
+        <p>Download and run the PKG installer from the official site, or use the command line:</p>
+        <pre><code class="language-bash">curl -Lo dotnet.tar.gz https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.308/dotnet-sdk-9.0.308-osx-x64.tar.gz
+mkdir -p ~/dotnet
+tar -C ~/dotnet -xf dotnet.tar.gz
+export DOTNET_ROOT=~/dotnet
+export PATH=$PATH:~/dotnet</code></pre>
+
+        <h3>Linux (Ubuntu/Debian)</h3>
+        <p>Manual installation:</p>
+        <pre><code class="language-bash">curl -Lo dotnet.tar.gz https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.308/dotnet-sdk-9.0.308-linux-x64.tar.gz
+mkdir -p ~/dotnet
+tar -C ~/dotnet -xf dotnet.tar.gz
+export DOTNET_ROOT=~/dotnet
+export PATH=$PATH:~/dotnet</code></pre>
+
+        <p>Verify installation:</p>
+        <pre><code class="language-bash">dotnet --version</code></pre>
+
+        <hr class="my-4">
+
+        <h2>Installing Claude Code CLI</h2>
+
+        <p>Native installer (recommended):</p>
+        <pre><code class="language-bash"># macOS/Linux
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Windows PowerShell
+irm https://claude.ai/install.ps1 | iex</code></pre>
+
+        <p>Or via npm (requires Node.js 18+):</p>
+        <pre><code class="language-bash">npm install -g @@anthropic-ai/claude-code</code></pre>
+
+        <p>After installation:</p>
+        <pre><code class="language-bash">claude doctor
+claude</code></pre>
+
+        <p>
+            Requires an active billing account at
+            <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>
+            or a Claude Pro/Max subscription.
+        </p>
+
+        <hr class="my-4">
+
+        <h2>Creating the Project</h2>
+        <p>Create a new ASP.NET Core MVC project:</p>
+        <pre><code class="language-bash">dotnet new mvc -n TodoApp
+cd TodoApp
+dotnet run</code></pre>
+        <p>
+            Navigate to <code>https://localhost:5001</code> to see the default template.
+        </p>
+
+        <hr class="my-4">
+
+        <h2>Hot Reload with dotnet watch</h2>
+        <p>
+            Use <code>dotnet watch run</code> to automatically reload the app when you make changes.
+            This is useful during development so you don't have to restart the server manually.
+        </p>
+        <pre><code class="language-bash">dotnet watch run</code></pre>
+        <p>
+            The watcher will detect changes to <code>.cs</code>, <code>.cshtml</code>, and other files,
+            then automatically rebuild and refresh your browser.
+        </p>
+        <p>To stop the watcher, press <code>Ctrl+C</code> in the terminal.</p>
+
+        <hr class="my-4">
+
+        <div class="final-step p-4 bg-light rounded">
+            <h2>Ready to Build</h2>
+            <p>
+                You now have everything you need to build your todo list application.
+                Click on the <strong>Finished Product</strong> tab to see the completed app in action,
+                then use Claude Code to help you build it step by step.
+            </p>
+        </div>
+    </article>
+</div>
